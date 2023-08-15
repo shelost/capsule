@@ -3,8 +3,9 @@
 
 body{
     font-family: 'Inter Tight', sans-serif;
-    background: #0f1126;
+    background: #080a15;
     color: white;
+    margin: 0;
 }
 
 #navbar{
@@ -36,16 +37,96 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow-y: hidden;
 
     #logo{
+        width: 160px;
         margin-bottom: 50px;
     }
 
-
     h1{
-        font-size: 90px;
+        font-size: 60px;
         font-weight: 800;
         margin: 0;
         margin-bottom: 5px;
+    }
+}
+
+
+#row{
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+
+    a{
+        color: white;
+        text-decoration: none;
+    }
+
+    .app{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img{
+            height: 100px;
+            margin: 40px;
+            border-radius: 10px;
+            transition: 0.1s ease;
+        }
+
+        .expo{
+            text-align: center;
+            margin: 0;
+            h1{
+                font-size: 18px;
+                font-weight: 500;
+                letter-spacing: 0.5px;
+            }
+            h2{
+                font-size: 14px;
+                font-weight: 300;
+                letter-spacing: 0.5px;
+                color: rgba(white, 0.4);
+            }
+        }
+
+        &:hover{
+            img{
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px){
+
+    #splash{
+        margin-top: 50px;
+        img{
+
+        }
+        h1{
+            font-size: 32px;
+        }
+    }
+
+    #splash{
+        height: fit-content;
+        overflow-y: scroll;
+    }
+
+    #row{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 100px;
+
+
+        .app{
+            img{
+                height: 60vw;
+            }
+        }
+
     }
 }
